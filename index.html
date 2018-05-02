@@ -1,19 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta style="" name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <style media="screen">
+  meter {
+      /* For Firefox */
+      background: #EEE;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+      border-radius: 3px;
+  }
+
+  meter::-moz-meter-bar {
+      border-radius: 3px;
+  }
+
+  meter:-moz-meter-optimum::-moz-meter-bar {
+      background: #86CC00;
+  }
+
+  meter:-moz-meter-sub-optimum::-moz-meter-bar {
+      background: #FFDB1A;
+  }
+
+  meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+      background: #CC4600;
+  }
+
+  </style>
 </head>
+
 <body>
-  <h1>Titulo h1</h1>
-  <h2>Titulo h2</h2>
-  <h3>Titulo h3</h3>
-  <h4>Titulo h4</h4>
-  <h5>Titulo h5</h5>
-  <h6>Titulo h6</h6>
+
+  <h1 style="color:#cccccc">Hola Mundo</h1>
+  <p><p>
+    <pre>
+      &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+        &#x3C;meta style=&#x22;&#x22; name=&#x22;viewport&#x22;       content=&#x22;width=device-width,     initial-scale=1.0&#x22;&#x3E;
+        &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;ie=edge&#x22;&#x3E;
+    </pre>
+    <a href="javascript:document.getElementsByTagName('dialog')[0].setAttribute('open','open');">Click</a>
+    <dialog><span><a href="javascript:document.getElementsByTagName('dialog')[0].removeAttribute('open');">X</a></span><p>Este es un dialogo</p></dialog>
+      table>tr*2>th{Elemento $}*5
+    <i></i>
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit sint sed asperiores unde ipsam eaque cupiditate, adipisci, odit itaque illum a similique magni quisquam quae ducimus incidunt officiis, nesciunt?</p>
+  <p>Ut dolores provident molestias perferendis suscipit a sequi reiciendis nulla libero aut, vitae, doloremque laborum, ea quia officia tenetur velit quae fuga dolor laudantium repudiandae expedita veniam animi mollitia! Fugiat!</p>
+  <p>Aliquid quibusdam aspernatur ipsam laborum eveniet rerum minus impedit accusantium reprehenderit eius non qui ea eaque molestiae debitis ipsum ratione hic, voluptas sed dolorem suscipit minima. Delectus harum, accusantium nulla!</p>
+  <p>Natus ratione debitis rem accusamus doloribus mollitia eum earum minima, saepe ipsam molestiae velit deleniti, ipsum, consectetur voluptate sunt magni. Voluptatem aliquid at magni voluptates. Est odio fugiat totam ex.</p>
+  <p>Natus sint dolores itaque ipsum perferendis mollitia ex nam deleniti, eligendi minima, ipsam distinctio facilis alias nesciunt corrupti quisquam nobis delectus nemo labore porro adipisci odio reprehenderit. Perferendis, sunt sapiente.</p>
+  <p>Aperiam perspiciatis veniam fuga velit inventore? Atque molestiae sit est rerum facilis provident veritatis ex suscipit, animi, ad voluptatem, expedita magnam. Unde inventore et debitis quidem nemo exercitationem, deserunt hic!</p>
+  <p>Enim fuga libero cum, modi dolorem ea dolorum unde natus dolore deserunt ducimus tempore reiciendis magni quos soluta mollitia minus dicta, corporis quibusdam doloribus debitis similique. Sunt vero adipisci, quam.</p>
+  <p>Delectus, neque rem soluta dolorem vero mollitia consectetur, impedit corrupti veritatis cumque rerum et voluptate libero quas, expedita doloribus? Officiis reprehenderit, voluptate quae sit repellendus sequi mollitia nam eos aut.</p>
+  <p>Vitae deleniti porro odio explicabo, id illum reprehenderit ullam maxime, repellat omnis, a, ad earum eaque. Iusto rerum adipisci consequuntur nihil, aperiam totam, est ipsum ipsa vel odit dicta hic?</p>
+  <p>Explicabo beatae itaque, cupiditate qui voluptatem maiores vitae inventore perferendis pariatur similique ex quaerat eum aliquam voluptatum veniam deleniti corporis porro eos rem perspiciatis officiis provident non quidem. Laudantium, illo.</p></p>
+
+  <div contextmenu="myMenu">Right-Click Me</div>
+  <menu type="context" id="myMenu">
+      <menuitem label="Twitter" icon="twitter.png" title="The first menu item">
+      <menuitem label="Item 2" title="The second menu item" disabled>
+  </menu>
+
+  &nbsp;<meter id="bar" value="1" min="1" max="10" low="2" high="7" optimum="10"></meter>
+  <span id="txtBar"></span>
+  </br>
+  <a accesskey="+" href="javascript:var barElement = document.getElementById('bar'); barElement.value = (barElement.value+0.2); document.getElementById('txtBar').innerHTML = barElement.value">+</a>
+  /
+  <a accesskey="-" href="javascript:var barElement = document.getElementById('bar'); barElement.value = (barElement.value-0.2); document.getElementById('txtBar').innerHTML = barElement.value">-</a>
+
 </body>
 
 </html>
