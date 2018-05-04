@@ -7,10 +7,36 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="" method="post" autocomplete="on" > <!-- enctype="multipart/form-data",  -->
+  <h1>Ejemplo de Formulario</h1>
+  <form action="" target="_parent" name="frmUser" id="frmUser" method="post" autocomplete="on" > <!-- enctype="multipart/form-data", novalidate  -->
 
-    <input accesskey="e" disabled type="button" value="Enviar">
+    <!-- Type Checkbox -->
+    <div id="contCheckbox">
+
+      <fieldset>
+        <legend>Seleccione sus Hobbys</legend>
+        <label for="music">Musica</label>
+        <input type="checkbox" name="Hobbys" id="music" value="musica">
+        <br>
+        <label for="sports">Deportes</label>
+        <input type="checkbox" name="Hobbys" id="sports" value="deportes">
+        <br>
+        <label for="sports">Deportes</label>
+        <input type="checkbox" name="Hobbys" id="sports" value="deportes">
+      </fieldset>
+
+
+    </div>
+    <br>
+
+    <!-- Type Buttons -->
+    <div id="contCheckbox">
+      <input type="submit" value="Limpiar">
+      <input type="reset" value="Enviar">
+      <input accesskey="v" disabled type="button" value="Validar">
+    </div>
 
   </form>
+
 </body>
 </html>
