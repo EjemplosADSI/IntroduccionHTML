@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +8,154 @@
 </head>
 <body>
   <h1>Ejemplo de Formulario</h1>
-  <form action="" target="_parent" name="frmUser" id="frmUser" method="post" autocomplete="on" > <!-- enctype="multipart/form-data", novalidate  -->
-
-    <!-- Type Checkbox -->
-    <div id="contCheckbox">
+  <form action="/send.php" target="_parent" name="frmUser" id="frmUser" method="post" > <!-- enctype="multipart/form-data", novalidate, autocomplete="on"  -->
 
       <fieldset>
-        <legend>Seleccione sus Hobbys</legend>
-        <label for="music">Musica</label>
-        <input type="checkbox" name="Hobbys" id="music" value="musica">
-        <br>
-        <label for="sports">Deportes</label>
-        <input type="checkbox" name="Hobbys" id="sports" value="deportes">
-        <br>
-        <label for="sports">Deportes</label>
-        <input type="checkbox" name="Hobbys" id="sports" value="deportes">
+        <legend>Informacion Personal</legend>
+
+        <!-- Type: text -->
+        <strong><label for="nombres">Nombres:</label></strong>
+        <input type="text" size="40" name="nombre" id="nombre" minlength="2" maxlength="30" placeholder="Ingresa tus Nombres" pattern="^[a-zA-Z]+$" title="Solo letas" required > <!-- pattern="[A-z]{2}[0-9]{4}"  -->
+        <br><br>
+
+        <!-- Type: url -->
+        <strong><label for="pagina">Pagina Personal:</label></strong>
+        <input type="url" name="pagina" id="pagina" placeholder="http://www.example.com" list="defaultURLs" size="40" minlength="12" maxlength="80" placeholder="Ingrese la direccion de su pagina" title="Url Valida con HTTP" required > <!-- pattern="[A-z]{2}[0-9]{4}"  -->
+        <datalist id="defaultURLs">
+          <option value="http:// " label="google">
+          <option value="https:// ">
+          <option value="http://www. ">
+          <option value="https://www. ">
+        </datalist>
+        <br><br>
+
+        <!-- Type: Search -->
+        <strong><label for="buscar">Consulta:</label></strong>
+        <input type="search" name="buscar" id="buscar" size="30" minlength="4" maxlength="8" placeholder="Ingresa tu consulta..." required > <!-- pattern="[A-z]{2}[0-9]{4}"  -->
+        <br><br>
+
+        <!-- Type: number -->
+        <strong><label for="n_zapatos">Numero de Zapatos: </label></strong>
+        <input type="number" name="n_zapatos" id="n_zapatos" list="defaultNumbers" placeholder="Pares Max 20" step="2" min="0" max="20" inputmode="numeric" minlength="4" maxlength="8" size="8" autocomplete="off" required> <!-- value="0", step="0.01" -->
+        <datalist id="defaultNumbers">
+          <option value="2">
+          <option value="4">
+          <option value="6">
+          <option value="8">
+          <option value="10">
+        </datalist>
+        <br><br>
+
+        <!-- Type: tel -->
+        <strong><label for="telefono">Telefono:</label></strong>
+        <input type="tel" name="telefono" id="telefono" pattern="[0-9]{3}-[0-9]{7}" list="defaultOperators" value="" placeholder="31x-xxxxxxx" size="12" minlength="10" maxlength="11" required > <!--   -->
+        <datalist id="defaultOperators">
+          <option value="310">
+          <option value="315">
+          <option value="320">
+        </datalist>
+        <br><br>
+
+        <!-- Type: Color -->
+        <strong><label for="color">Color Favorito: </label></strong>
+        <input type="color" name="Color" id="color" required> <!-- value="#23cd18", No soporta rgba -->
+        <br><br>
+
+        <!-- Type: Date -->
+        <strong><label for="nacimiento">Fecha Nacimiento:</label></strong>
+        <input type="date" name="nacimiento" id="nacimiento" min="2000-01-01" max="2018-12-31" required > <!-- value="2017-02-01", pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" -->
+        <br><br>
+
+        <!-- Type: time -->
+        <strong><label for="hora">Hora Registro:</label></strong>
+        <input type="time" name="hora" value="06:00" id="hora" min="06:00" max="18:00" step="2" pattern="[0-9]{2}:[0-9]{2}" required > <!-- value="2017-02-01", pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" -->
+        <br><br>
+
+        <!-- Type: Date Time Local, Date-time -->
+        <strong><label for=ingreso"">Fecha y Hora de Ingreso</label></strong>
+        <input type="datetime-local" name="ingreso" id="ingreso" value="-08:00" value="2017-06-01T08:30" required > <!-- min="2017-06-01T08:30" max="2017-06-30T16:30" -->
+        <br><br>
+
+        <!-- Type: week -->
+        <strong><label for="semana">Semana</label></strong>
+        <input type="week" name="semana" id="semana" min="2018-W1" max="2018-W52" value="2018-W15" required> <!-- pattern="[0-9]{4}-[0-9]{2} -->
+        <br><br>
+
+        <!-- Type: month -->
+        <strong><label for="mes_pago">Mes Pago</label></strong>
+        <input type="month" name="mes_pago" id="mes_pago" min="2018-01" max="2018-12" value="2018-05" required> <!-- pattern="[0-9]{4}-[0-9]{2} -->
+        <br><br>
+
+        <!-- Type: email -->
+        <strong><label for="correo">Ingrese su correo: </label></strong>
+        <input type="email" size="30" minlength="4" maxlength="60" placeholder="usuario@midominio.com" name="correo" id="correo" inputmode="email" title="Ingrese su correo empresarial" required> <!-- multiple, value="@example.com", list="defaultEmails" -->
+        <br><br>
+
+        <!-- Type: file -->
+        <strong><label for="hoja_vida">Hoja de Vida: </label></strong>
+        <input type="file" name="hoja_vida" id="hoja_vida" accept=".doc, .docx, .pdf" required multiple> <!--  -->
+        <br><br>
+
+        <!-- Type: password -->
+        <strong><label for="contrasena">Contaseña: </label></strong>
+        <input type="password" name="contrasena" id="contrasena" autocomplete="current-password" inputmode="numeric" required> <!--  -->
+        <br><br>
+
+        <!-- Type: range -->
+        <strong><label for="grado">Grado Profesional: </label></strong>
+        <input type="range" name="grado" id="grado" step="1" min="0" max="20" value="5" list="listGrados" style="width:200px;" required> <!--  -->
+
+        <datalist id="listGrados">
+          <option value="1" label="1">
+          <option value="3" label="3">
+          <option value="9" label="9">
+          <option value="12" label="12">
+          <option value="15" label="15">
+          <option value="18" label="18">
+          <option value="20" label="20">
+        </datalist>
+
+        <br><br>
+
+        <!-- Type: hidden -->
+        <input type="hidden" name="oculto" id="oculto" value="varhidden">
+
       </fieldset>
 
+      <!-- Type: Radio -->
+      <fieldset>
+        <legend>Seleccione su Lenguaje</legend>
+        <input type="radio" name="Studies" id="php" value="php" checked>
+        <label for="php">PHP</label>
+        <br>
+        <input type="radio" name="Studies" id="java" value="java">
+        <label for="java">Java</label>
+        <br>
+        <input type="radio" name="Studies" id=".net" value=".net">
+        <label for="net">.Net</label>
+      </fieldset>
 
-    </div>
+      <!-- Type: Checkbox -->
+      <fieldset>
+        <legend>Seleccione sus Hobbys</legend>
+        <input type="checkbox" name="Hobbys" id="music" value="musica">
+        <label for="music">Musica</label>
+        <br>
+        <input type="checkbox" name="Hobbys" id="sports" value="deportes">
+        <label for="sports">Deportes</label>
+        <br>
+        <input type="checkbox" name="Hobbys" id="develop" value="desarrollo" checked required>
+        <label for="develop">Programacion</label>
+      </fieldset>
+\
     <br>
 
     <!-- Type Buttons -->
     <div id="contCheckbox">
-      <input type="submit" value="Limpiar">
-      <input type="reset" value="Enviar">
-      <input accesskey="v" disabled type="button" value="Validar">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpiar">
+      <input type="button" value="Validar" accesskey="v" disabled>
+      <input type="image" height="35" width="150" src="https://www.glsen.org/sites/default/files/LOGIN.jpg" alt="login">
     </div>
 
   </form>
